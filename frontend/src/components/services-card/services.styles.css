@@ -1,0 +1,45 @@
+.services-card-wrapper {
+	margin-bottom: 10vh;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 100%;
+}
+
+.services-card-wrapper .card {
+	border: none;
+	border-radius: 12px 0 12px 0;
+	flex-direction: unset;
+}
+
+.services-card-wrapper .card .card-title {
+	color: var(--color2);
+	font-family: var(--fontF);
+	font-size: 1.25rem;
+}
+
+.services-card-wrapper .card .card-body {
+	background-color: #f1f9ff;
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05) !important;
+	height: 100%;
+}
+
+.services-card-wrapper .card .card-text {
+	color: var(--color3);
+	font-family: var(--fontB);
+	font-size: 1rem;
+}
+
+.services-card-wrapper .card .card-img {
+	height: 100%;
+	object-fit: contain;
+	object-position: center center;
+	transition: transform 0.7s linear;
+}
+
+.services-card-wrapper .card .services-info {
+	font-family: var(--fontB);
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+}

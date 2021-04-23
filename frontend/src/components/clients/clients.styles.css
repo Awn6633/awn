@@ -1,0 +1,23 @@
+.clients {
+	min-height: 50vh;
+	overflow: hidden;
+}
+.client-list {
+	margin-top: 79px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-left: -25px;
+	margin-right: -25px;
+}
+
+.clients-list-item {
+	display: inline-flex;
+	padding: 0 25px;
+	margin-bottom: 65px;
+}
+.client-logo-image {
+	display: inline-block;
+	max-width: 200px;
+}

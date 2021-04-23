@@ -1,0 +1,340 @@
+:root {
+	--textColor: #fff;
+	--titleColor: rgba(255, 255, 255, 0.425);
+	--backgroundColor: #fff;
+	--project-title-size: 11vw;
+	--button-color: #a79589;
+}
+.hero {
+	width: 100vw;
+	height: 100vh;
+	background: rgb(9, 9, 121);
+	background: linear-gradient(180deg, var(--color1) 100%, var(--color2) 100%);
+	position: relative;
+	overflow: hidden;
+}
+
+.hero-content {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-gap: 0;
+	grid-template-rows: auto;
+	justify-content: center;
+	padding: 0 5rem;
+}
+
+.hero-img {
+	display: grid;
+	align-content: end;
+	justify-self: center;
+	z-index: 5;
+	width: 40vw;
+	height: 100%;
+}
+.hero img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+.hero-text {
+	height: auto;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	justify-self: center;
+	z-index: 5;
+	position: relative;
+}
+/* .hero-text .shadow-title {
+	position: relative;
+	font-family: var(--fontB);
+	font-size: 14vw;
+	color: rgba(255, 255, 255, 0.356);
+}
+.hero-text .shadow-title .sub-title {
+	position: absolute;
+	font-family: var(--fontB);
+	font-size: 6vw;
+	top: 50%;
+	color: #fff;
+	left: 20%;
+} */
+.hero-text .hero-desc {
+	color: #fff;
+	font-size: 22px;
+	margin-top: 3vh;
+}
+/* tlit svg  */
+.svg-hero {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	min-height: 174px;
+	overflow: hidden !important;
+}
+
+/* svg path */
+.path1 {
+	position: absolute;
+	top: 25%;
+	left: -5%;
+	width: 320px;
+	height: 360px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 61%;
+	transform: rotate(11deg);
+}
+.path2 {
+	position: absolute;
+	top: 27%;
+	left: 4%;
+	width: 320px;
+	height: 360px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: rotate(80deg);
+	opacity: 61%;
+}
+.path3 {
+	position: absolute;
+	top: 40%;
+	right: -8%;
+	width: 320px;
+	height: 360px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: rotate(350deg);
+	opacity: 61%;
+}
+
+.projectTitle {
+	font-size: var(--project-title-size);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.111em;
+	line-height: 0.9;
+	cursor: pointer;
+	color: var(--titleColor);
+	display: inline-block;
+	position: relative;
+	padding-left: 50px;
+	--maskX: 0;
+	--maskY: 50;
+	z-index: 5;
+}
+
+.projectTitle .cloneWrapper {
+	transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+	color: var(--backgroundColor);
+	position: absolute;
+	padding-left: 50px;
+	top: 0;
+	left: 0;
+	-webkit-clip-path: polygon(
+		0 0,
+		calc(var(--maskX) * 1% + (var(--maskY) - 50) * 0.4%) 0,
+		calc(var(--maskX) * 1% + (var(--maskY) - 50) * -0.4%) 100%,
+		0 100%
+	);
+	clip-path: polygon(
+		0 0,
+		calc(var(--maskX) * 1% + (var(--maskY) - 50) * 0.5%) 0,
+		calc(var(--maskX) * 1% + (var(--maskY) - 50) * -0.5%) 100%,
+		0 100%
+	);
+}
+.projectTitle .part .arabic-title {
+	font-size: 5vw;
+	margin-left: 0.065em;
+	margin-bottom: 50px;
+	letter-spacing: 0;
+	color: #fff;
+	display: inline-block;
+	position: absolute !important;
+	font-family: var(--fontR);
+	top: 62%;
+	left: 97px;
+}
+.projectTitle .part {
+	display: block;
+}
+
+.projectTitle .part .lineWrapper {
+	margin-right: 0.69em;
+	margin-left: 0.065em;
+}
+.projectTitle .part .letterWrapper {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	-webkit-perspective: 400px;
+	perspective: 400px;
+}
+
+.projectTitle .part .letterWrapper span {
+	display: inline-block;
+	-webkit-transform-origin: bottom left;
+	transform-origin: bottom left;
+	font-family: var(--fontB);
+}
+.projectTitle .part .line {
+	display: inline-block;
+	vertical-align: middle;
+	height: 0.085em;
+	width: 0.65em;
+	background-color: var(--titleColor);
+}
+
+@media screen and (max-width: 992px) {
+	.hero-content {
+		grid-template-columns: unset;
+		grid-template-rows: repeat(2, 1fr);
+	}
+	.projectTitle {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+	.hero-text {
+		align-content: end;
+	}
+	/* .hero-text .shadow-title {
+		margin: 0 auto;
+	} */
+	.hero-text .hero-desc {
+		max-width: 18em;
+		margin: 2vh auto;
+	}
+	.hero-img {
+		width: 50vw;
+	}
+
+	.projectTitle {
+		margin: 0 auto;
+	}
+	.hook {
+		margin: 3vh auto !important;
+		font-size: 3.5vw !important;
+		max-width: 27em !important;
+	}
+	.path1 {
+		position: absolute;
+		top: 50%;
+		left: -10%;
+		transform: rotate(-18deg);
+	}
+	.path2 {
+		position: absolute;
+		top: 30%;
+		left: 5%;
+		transform: rotate(90deg);
+	}
+	.path3 {
+		position: absolute;
+		top: 20%;
+		right: -10%;
+		/* transform: rotate(90deg); */
+	}
+}
+@media screen and (min-width: 576px) and (max-width: 766px) {
+	.hero-text {
+		align-content: end;
+	}
+	/* .hero-text .shadow-title {
+		font-size: 17vw;
+		margin: 0 auto;
+	} */
+	.hero-text .hero-desc {
+		max-width: 18em;
+		font-size: 22px;
+	}
+	.hero-img {
+		width: 60vw;
+	}
+	.hero-text .shadow-title .sub-title {
+		font-size: 8vw;
+	}
+	.projectTitle {
+		font-size: 20vw;
+	}
+	.projectTitle .part .arabic-title {
+		font-size: 9vw;
+	}
+
+	.path1 {
+		position: absolute;
+		top: 50%;
+		left: -10%;
+		transform: rotate(-18deg);
+	}
+	.path2 {
+		position: absolute;
+		top: 30%;
+		left: 5%;
+		transform: rotate(90deg);
+	}
+	.path3 {
+		position: absolute;
+		top: 20%;
+		right: -10%;
+		/* transform: rotate(90deg); */
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.hero-text {
+		align-content: end;
+	}
+
+	.hero-text .hero-desc {
+		max-width: 18em;
+		font-size: 22px;
+	}
+	.hero-img {
+		width: 85vw;
+	}
+
+	.projectTitle {
+		font-size: 20vw;
+	}
+	.projectTitle .part .arabic-title {
+		font-size: 9vw;
+	}
+
+	.path1,
+	.path2,
+	.path3 {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.hero-text {
+		align-content: end;
+	}
+
+	.hero-text .hero-desc {
+		max-width: 40em;
+		margin: auto;
+		text-align: center;
+		font-size: 22px;
+	}
+	.hero-img {
+		width: 90vw;
+	}
+
+	.projectTitle {
+		margin: 0 auto;
+		font-size: 25vw;
+	}
+	.projectTitle .part .arabic-title {
+		font-size: 11vw;
+	}
+}

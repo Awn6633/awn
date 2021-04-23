@@ -1,0 +1,56 @@
+.clients-count {
+	min-height: 70vh;
+	background-repeat: no-repeat;
+	width: 100vw;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	margin-top: 20vh;
+
+	display: flex;
+}
+
+.clients-icon::after {
+	content: ' ';
+	display: block;
+	width: 2px;
+	height: 50px;
+	position: absolute;
+	top: 40%;
+	right: 0;
+	background-color: var(--color1);
+}
+.last::after {
+	content: '';
+	display: none;
+}
+.clinet-count-wrapper {
+	display: flex;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	text-align: center;
+	width: 100%;
+}
+
+.clinet-count-wrapper svg {
+	color: var(--color1);
+	font-size: 5rem;
+}
+
+.clinet-count-wrapper p {
+	color: #153962;
+	font-family: var(--fontF);
+	font-size: 3rem;
+	margin: 15px 0;
+	text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+	.clients-icon::after {
+		content: ' ';
+		display: none;
+	}
+}

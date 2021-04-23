@@ -1,0 +1,40 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	overflow-x: hidden;
+}
+@font-face {
+	font-family: 'BaseFont';
+	src: URL('./Ara.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'BaseReg';
+	src: URL('./ArbFONTS-GE_Dinar_One_Light.otf') format('truetype');
+}
+
+@font-face {
+	font-family: 'BaseBold';
+	src: URL('./ArbFONTS-GE_Dinar_One_Medium.otf') format('truetype');
+}
+
+:root {
+	--color1: #235b93;
+	--color2: #2867b2;
+	--fontB: BaseBold;
+	--fontR: BaseReg;
+	--fontF: BaseFont;
+
+	--color3: #3ea4fb;
+}
+
+.custom-container {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1346px;
+	padding-right: 10px;
+	padding-left: 10px;
+}

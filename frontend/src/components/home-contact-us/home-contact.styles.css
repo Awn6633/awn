@@ -1,0 +1,36 @@
+.home-contact-title {
+	color: var(--color1);
+	font-size: 3rem;
+	font-family: var(--fontR);
+	font-weight: 600;
+}
+
+.home-contact-us {
+	margin: 20vh 0;
+}
+.contact-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	align-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.contact-icon {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+}
+
+.contact-icon svg {
+	font-size: 2rem;
+	margin: 0 20px;
+}
+
+.contact-btn {
+	justify-self: flex-end;
+	display: flex;
+}

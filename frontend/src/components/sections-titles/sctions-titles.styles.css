@@ -1,0 +1,16 @@
+.sections-titles-wrapper {
+	margin-top: 17vh;
+	margin-bottom: 7vh;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	overflow: hidden;
+	width: auto;
+}
+.sections-title {
+	color: var(--color1);
+	font-size: 3.5rem;
+	font-weight: bold;
+	font-family: var(--fontB);
+	overflow: hidden;
+}
