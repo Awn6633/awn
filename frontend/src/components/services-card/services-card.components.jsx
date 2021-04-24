@@ -20,15 +20,15 @@ function ServicesCard({ item }) {
 		// 	},
 		// })
 	}, [])
+
 	return (
 		<div ref={scroller} className='services-card-wrapper '>
 			<div className='card mb-3'>
 				<div className='row  no-gutters'>
-					{item.pos == 'right' ? (
-						<Col lg={6} md={12}>
-							<img ref={elem} src={item.img} className='card-img' alt='...' />
-						</Col>
-					) : null}
+					<Col lg={6} md={12}>
+						<img ref={elem} src={item.img} className='card-img' alt='...' />
+					</Col>
+
 					<Col lg={6} md={12}>
 						<div className='card-body'>
 							<h5 className='card-title'>{item.title}</h5>
@@ -43,11 +43,6 @@ function ServicesCard({ item }) {
 							</p>
 						</div>
 					</Col>
-					{item.pos == 'left' ? (
-						<Col lg={6} md={12}>
-							<img ref={elem} src={item.img} className='card-img' alt='...' />
-						</Col>
-					) : null}
 				</div>
 			</div>
 		</div>

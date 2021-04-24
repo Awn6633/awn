@@ -5,7 +5,8 @@ import { FaCode, FaCodeBranch, FaUsers, FaServicestack } from 'react-icons/fa'
 import { Container, Row, Col } from 'react-bootstrap'
 function ClientCount() {
 	return (
-		<section style={{ backgroundImage: `url(${countImage})` }} className='clients-count'>
+		// style={{ backgroundImage: `url(${countImage})` }}
+		<section className='clients-count'>
 			<div className='clinet-count-wrapper'>
 				<Container>
 					<Row>

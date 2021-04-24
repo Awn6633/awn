@@ -1,12 +1,12 @@
 :root {
-	--textColor: #fff;
-	--titleColor: rgba(255, 255, 255, 0.425);
-	--backgroundColor: #fff;
-	--project-title-size: 11vw;
+	--textColor: rgba(255, 255, 255, 0.425);
+	--titleColor: #fff;
+	--backgroundColor: black;
+	--project-title-size: 9vw;
 	--button-color: #a79589;
 }
 .hero {
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	background: rgb(9, 9, 121);
 	background: linear-gradient(180deg, var(--color1) 100%, var(--color2) 100%);
@@ -116,21 +116,26 @@
 .projectTitle {
 	font-size: var(--project-title-size);
 	font-weight: 600;
-	text-transform: uppercase;
+
 	letter-spacing: 0.111em;
 	line-height: 0.9;
 	cursor: pointer;
 	color: var(--titleColor);
 	display: inline-block;
 	position: relative;
+	font-family: var(--fontF);
 	padding-left: 50px;
 	--maskX: 0;
 	--maskY: 50;
 	z-index: 5;
 }
+.arabic-title {
+	font-family: var(--fontF) !important;
+	letter-spacing: 0 !important;
+}
 
 .projectTitle .cloneWrapper {
-	transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 	color: var(--backgroundColor);
 	position: absolute;
 	padding-left: 50px;
@@ -149,18 +154,19 @@
 		0 100%
 	);
 }
-.projectTitle .part .arabic-title {
-	font-size: 5vw;
-	margin-left: 0.065em;
-	margin-bottom: 50px;
-	letter-spacing: 0;
-	color: #fff;
-	display: inline-block;
-	position: absolute !important;
-	font-family: var(--fontR);
-	top: 62%;
-	left: 97px;
-}
+
+/* .projectTitle .part .arabic-title {
+		font-size: 5vw;
+		margin-left: 0.065em;
+		margin-bottom: 50px;
+		letter-spacing: 0;
+		color: #fff;
+		display: inline-block;
+		position: absolute !important;
+		font-family: var(--fontR);
+		top: 62%;
+		left: 97px;
+	} */
 .projectTitle .part {
 	display: block;
 }
@@ -181,14 +187,26 @@
 	display: inline-block;
 	-webkit-transform-origin: bottom left;
 	transform-origin: bottom left;
-	font-family: var(--fontB);
+	font-family: var(--fontF);
 }
 .projectTitle .part .line {
 	display: inline-block;
 	vertical-align: middle;
-	height: 0.085em;
-	width: 0.65em;
+	height: 0.055em;
+	width: 0.25em;
 	background-color: var(--titleColor);
+}
+.projectTitle .cloneWrapper .line {
+	background-color: var(--backgroundColor);
+}
+
+.hook {
+	color: #fff;
+	margin: 3vh auto;
+	max-width: 24em;
+	font-size: 17.76px;
+	font-size: 1.75rem;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 992px) {
@@ -219,11 +237,7 @@
 	.projectTitle {
 		margin: 0 auto;
 	}
-	.hook {
-		margin: 3vh auto !important;
-		font-size: 3.5vw !important;
-		max-width: 27em !important;
-	}
+
 	.path1 {
 		position: absolute;
 		top: 50%;
@@ -240,17 +254,13 @@
 		position: absolute;
 		top: 20%;
 		right: -10%;
-		/* transform: rotate(90deg); */
 	}
 }
 @media screen and (min-width: 576px) and (max-width: 766px) {
 	.hero-text {
 		align-content: end;
 	}
-	/* .hero-text .shadow-title {
-		font-size: 17vw;
-		margin: 0 auto;
-	} */
+
 	.hero-text .hero-desc {
 		max-width: 18em;
 		font-size: 22px;
@@ -261,11 +271,9 @@
 	.hero-text .shadow-title .sub-title {
 		font-size: 8vw;
 	}
-	.projectTitle {
-		font-size: 20vw;
-	}
-	.projectTitle .part .arabic-title {
-		font-size: 9vw;
+	.projectTitle,
+	.arabic-title {
+		font-size: 17vw;
 	}
 
 	.path1 {
@@ -284,7 +292,6 @@
 		position: absolute;
 		top: 20%;
 		right: -10%;
-		/* transform: rotate(90deg); */
 	}
 }
 
@@ -303,9 +310,6 @@
 
 	.projectTitle {
 		font-size: 20vw;
-	}
-	.projectTitle .part .arabic-title {
-		font-size: 9vw;
 	}
 
 	.path1,
@@ -330,7 +334,8 @@
 		width: 90vw;
 	}
 
-	.projectTitle {
+	.projectTitle,
+	.arabic-title {
 		margin: 0 auto;
 		font-size: 25vw;
 	}

@@ -1,8 +1,13 @@
 .navbar {
 	backdrop-filter: blur(50px);
-
-	transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+	display: block;
+	transition: transform 0.2s ease-out;
 }
+
+/* TODO: Change Nav to  Clip path on top  */
+/* TODO: remove backgroun clients counter and add it to footer */
+/* TODO: change our story image */
+/* TODO: change services Card */
 
 .navbar-light .navbar-nav .nav-link {
 	color: white;
@@ -11,12 +16,12 @@
 	margin: 0 20px;
 	transition: all 0.3s linear;
 	border-radius: 5px;
-	font-family: var(--fontR);
+	font-family: var(--fontF);
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-	background-color: var(--color2);
+	/* background-color: var(--color2); */
 	color: #fff;
 }
 .navbar-brand {
@@ -25,5 +30,177 @@
 }
 
 .navbar.nav-color {
-	background-color: var(--color1) !important;
+	background-color: #295b937a !important ;
+	box-shadow: 0 10px 20px 0 rgb(0 0 0 / 49%) !important;
+	backdrop-filter: blur(0px);
+}
+
+.brand {
+	position: fixed;
+	top: 2vh;
+	left: 2vw;
+	z-index: 200;
+}
+
+.nav {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 30%;
+	height: 100%;
+	background: var(--color2);
+	clip-path: circle(29px at calc(100% - 2vw - 35px) calc(2vh + 35px));
+	/* transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1); */
+	z-index: 100;
+	transition: clip-path 0.8s, transform 0.2s, width 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.nav.active {
+	clip-path: circle(75% at 50% 50vh);
+}
+.nav__link {
+	display: block;
+	font-size: 3.5rem;
+	font-weight: 800;
+	/* text-transform: lowercase; */
+	letter-spacing: -1px;
+	text-align: right;
+	padding: 1vh 5vw;
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+	/* transition: transform 0.8s, visibility 0s cubic-bezier(0.86, 0, 0.07, 1); */
+
+	opacity: 0;
+	transform: translateY(50%);
+	margin: 0 auto;
+	font-family: var(--fontF);
+}
+.nav__link:nth-child(1) {
+	transition-delay: 0.05s;
+}
+.nav__link:nth-child(2) {
+	transition-delay: 0.1s;
+}
+.nav__link:nth-child(3) {
+	transition-delay: 0.15s;
+}
+.nav__link:nth-child(4) {
+	transition-delay: 0.2s;
+}
+.nav__link.active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.nav .current,
+.nav .current:hover,
+.nav__link:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+.hamburger {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	cursor: pointer;
+	position: fixed;
+	z-index: 10;
+	top: 2vh;
+	right: 2vw;
+	background: var(--color2);
+
+	z-index: 150;
+}
+.hamburger__patty {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 2px;
+	width: 50%;
+	backgroud-clip: padding-box;
+	background: #f7f7f7;
+	transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.hamburger__patty:nth-child(1) {
+	transform: translate(-50%, calc(-50% - 8px));
+}
+.hamburger__patty:last-child {
+	transform: translate(-50%, calc(-50% + 8px));
+}
+.hamburger.active .hamburger__patty {
+	background: #fff;
+}
+.hamburger.active .hamburger__patty:nth-child(1) {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.hamburger.active .hamburger__patty:nth-child(2) {
+	opacity: 0;
+}
+.hamburger.active .hamburger__patty:nth-child(3) {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+.bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.15;
+	background: url('https://unsplash.it/1920/1080?image=1031') center/cover;
+	z-index: -1;
+}
+.bg:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+.onlyp {
+	color: black;
+	position: absolute;
+	bottom: 5vh;
+	left: 5vw;
+	opacity: 0.35;
+}
+
+.null {
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY(-100px);
+}
+
+.nav.null {
+	width: 0%;
+	transform: translateY(0px);
+	visibility: unset;
+}
+.nav.null .nav__link {
+	transition: unset;
+}
+
+@media screen and (max-width: 1200px) {
+	.null {
+		visibility: visible;
+		pointer-events: all;
+		transform: translateY(0px);
+	}
+
+	.nav {
+		width: 40vw !important;
+		transform: translateY(0px) !important;
+		visibility: unset !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.nav {
+		width: 100% !important;
+	}
 }

@@ -5,6 +5,7 @@ import strlink from '../../assets/undraw_Process_re_gws7.svg'
 import path1 from '../../assets/Path 3.svg'
 import path2 from '../../assets/Path 1.svg'
 import path3 from '../../assets/Path 4.svg'
+import logo from '../../assets/Logo-Awn-Final.svg'
 
 import './hero.styles.css'
 function HeroSection() {
@@ -13,10 +14,9 @@ function HeroSection() {
 	useEffect(() => {
 		const width = title.current.clientWidth
 		const height = title.current.clientHeight
-		// TODO: العب مع الارقام دي لما نفضي
 		title.current.onmousemove = function (e) {
-			const oX = (e.clientX / width) * 100 - 30
-			const oY = (e.clientY / height) * 100 - 30
+			const oX = (e.clientX / width) * e.offsetX
+			const oY = (e.clientY / height) * e.offsetY
 			title.current.style.setProperty('--maskX', oX)
 			title.current.style.setProperty('--maskY', oY)
 		}
@@ -34,6 +34,61 @@ function HeroSection() {
 				<div className='hero-text'>
 					<div ref={title} className='projectTitle'>
 						<div className='titleWrapper'>
+							<div className='part'>
+								<div className='letterWrapper'>
+									<span>A</span>
+								</div>
+								<div className='letterWrapper'>
+									<span>w</span>
+								</div>
+								<div className='letterWrapper'>
+									<span>n</span>
+								</div>
+								<div className='letterWrapper'>
+									<span className='line'></span>
+								</div>
+								<div className='letterWrapper arabic-title' style={{ margin: '0 10px' }}>
+									<span>عون</span>
+								</div>
+							</div>
+							{/* <div className='part'>
+								<div className='letterWrapper lineWrapper'>
+									<span className='line'></span>
+								</div>
+								<div className='letterWrapper'>
+									<span>عون</span>
+								</div>
+							</div> */}
+						</div>
+						<div className='titleWrapper cloneWrapper'>
+							<div className='part'>
+								<div className='letterWrapper'>
+									<span>A</span>
+								</div>
+								<div className='letterWrapper'>
+									<span>w</span>
+								</div>
+								<div className='letterWrapper'>
+									<span>n</span>
+								</div>
+								<div className='letterWrapper'>
+									<span className='line'></span>
+								</div>
+
+								<div className='letterWrapper arabic-title' style={{ margin: '0 10px' }}>
+									<span>عون</span>
+								</div>
+							</div>
+							{/* <div className='part'>
+								<div className='letterWrapper lineWrapper'>
+									<span className='line'></span>
+								</div>
+								<div className='letterWrapper'>
+									<span>عون</span>
+								</div>
+							</div> */}
+						</div>
+						{/* <div className='titleWrapper'>
 							<div className='part'>
 								<div className='letterWrapper'>
 									<span>A</span>
@@ -69,10 +124,10 @@ function HeroSection() {
 									<span>عون</span>
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</div>
 
-					<p className='hero-desc '>
+					<p className='hook'>
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, modi!
 					</p>
 				</div>

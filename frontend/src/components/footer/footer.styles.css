@@ -1,0 +1,21 @@
+.footer {
+	min-height: 60vh;
+	background-repeat: no-repeat;
+	/* width: 100vw; */
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+.footer h5 {
+	font-family: var(--fontF);
+	font-size: 2.5rem;
+	color: var(--color1);
+}
+
+.footer a {
+	/* font-family: var(--fontF); */
+	font-size: 1.25rem;
+}

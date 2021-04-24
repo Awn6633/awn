@@ -1,13 +1,5 @@
 .clients-count {
-	min-height: 70vh;
-	background-repeat: no-repeat;
-	width: 100vw;
-	background-size: cover;
-	background-position: center;
-	overflow: hidden;
 	margin-top: 20vh;
-
-	display: flex;
 }
 
 .clients-icon::after {
@@ -30,7 +22,7 @@
 	margin-bottom: 50px;
 	justify-content: center;
 	align-items: center;
-	height: 70vh;
+	/* height: 70vh; */
 	text-align: center;
 	width: 100%;
 }

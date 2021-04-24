@@ -4,8 +4,13 @@
 	box-sizing: border-box;
 }
 body {
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
 @font-face {
 	font-family: 'BaseFont';
 	src: URL('./Ara.ttf') format('truetype');
@@ -27,7 +32,6 @@ body {
 	--fontB: BaseBold;
 	--fontR: BaseReg;
 	--fontF: BaseFont;
-
 	--color3: #3ea4fb;
 }
 
