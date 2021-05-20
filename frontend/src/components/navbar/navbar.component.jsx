@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { Navbar, NavDropdown, Nav, Container } from 'react-bootstrap'
 
@@ -9,10 +9,10 @@ import './navbar.styles.css'
 import Logo from '../../assets/Logo-Awn-Final.svg'
 
 function TopNav() {
-	const nav = useRef(null)
 	const navHumb = useRef(null)
 	const toggle = useRef(null)
 	const cloneBrand = useRef(null)
+	const [active, setActive] = useState(null)
 	function toggleNav() {
 		// Show Nav
 		var navItems = navHumb.current.children
@@ -26,87 +26,55 @@ function TopNav() {
 		}
 	}
 	function handelScroll() {
-		if (window.scrollY > 300) {
-			nav.current.classList.add('null')
-			navHumb.current.classList.remove('null')
-			toggle.current.classList.remove('null')
-			cloneBrand.current.classList.remove('null')
+		var navItems = navHumb.current.children
+
+		if (window.scrollY <= 300 && active === true) {
+			navHumb.current.classList.add('active')
+			toggle.current.classList.add('active')
+			for (var i = 0, ii = navItems.length; i < ii; i++) {
+				navItems[i].classList.add('active')
+			}
 		} else {
-			nav.current.classList.remove('null')
-			navHumb.current.classList.add('null')
-			toggle.current.classList.add('null')
-			cloneBrand.current.classList.add('null')
+			navHumb.current.classList.remove('active')
+			toggle.current.classList.remove('active')
+			for (var i = 0, ii = navItems.length; i < ii; i++) {
+				navItems[i].classList.remove('active')
+			}
 		}
 	}
 	useEffect(() => {
+		setActive(window.matchMedia('(min-width: 992px)').matches)
 		window.addEventListener('scroll', handelScroll)
+		console.log('run', active)
 		return () => {
 			window.removeEventListener('scroll', handelScroll)
 		}
-	}, [])
+	}, [active])
 
 	return (
 		<div>
-			<Navbar ref={nav} collapseOnSelect expand='xl' fixed='top' className='d-none d-xl-block'>
-				<Container fluid>
-					<NavLink className='navbar-brand' to='/' exact>
-						<img alt='logo' src={Logo} width='50' height='50' />
-					</NavLink>
-					<Navbar.Toggle aria-controls='responsive-navbar-nav' />
-					<Navbar.Collapse id='responsive-navbar-nav'>
-						<Nav className='ml-auto mr-5'>
-							<NavDropdown title='Intrested' id='collasible-nav-dropdown'>
-								<NavLink className='nav-link' exact to='/'>
-									Home
-								</NavLink>
-								<NavDropdown.Divider />
-
-								<NavLink className='nav-link' exact to='/'>
-									Home
-								</NavLink>
-								<NavDropdown.Divider />
-								<NavLink className='nav-link' exact to='/'>
-									Home
-								</NavLink>
-							</NavDropdown>
-							<NavLink className='nav-link' exact to='/'>
-								Home
-							</NavLink>
-							<NavLink className='nav-link' exact to='/services'>
-								Service
-							</NavLink>
-							<NavLink className='nav-link' exact to='/story'>
-								Our Story
-							</NavLink>
-							<NavLink className='nav-link' exact to='/contact-us'>
-								Contact Us
-							</NavLink>
-						</Nav>
-					</Navbar.Collapse>
-				</Container>
-			</Navbar>
-			<div className='brand null' ref={cloneBrand}>
+			<div className='brand' ref={cloneBrand}>
 				<Link className='navbar-brand' to='/' exact>
 					<img alt='logo' src={Logo} width='50' height='50' />
 				</Link>
 			</div>
 
-			<nav ref={navHumb} className='nav null'>
-				<Link exact to='/' className='nav__link'>
+			<nav ref={navHumb} className={` nav ${active ? 'active' : ''}`}>
+				<Link exact to='/' className={`nav__link ${active ? 'active' : ''}`}>
 					Home
 				</Link>
-				<Link exact to='/services' className='nav__link'>
+				<Link exact to='/services' className={`nav__link ${active ? 'active' : ''}`}>
 					Services
 				</Link>
-				<Link exact to='/story' className='nav__link'>
+				<Link exact to='/story' className={`nav__link ${active ? 'active' : ''}`}>
 					Our Story
 				</Link>
-				<Link exact to='/contact' className='nav__link'>
+				<Link exact to='/contact' className={`nav__link ${active ? 'active' : ''}`}>
 					Contact Us
 				</Link>
 			</nav>
 
-			<div ref={toggle} onClick={toggleNav} className='hamburger null'>
+			<div ref={toggle} onClick={toggleNav} className={`hamburger ${active ? 'active' : ''}`}>
 				<span className='hamburger__patty'></span>
 				<span className='hamburger__patty'></span>
 				<span className='hamburger__patty'></span>

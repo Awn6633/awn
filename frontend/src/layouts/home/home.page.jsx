@@ -20,13 +20,13 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import { useSelector } from 'react-redux'
 
+import './home.styles.css'
+
 function HomePage() {
 	const Clientsdata = useSelector((state) => state.data.clients)
 
 	const Services = useSelector((state) => state.data.data)
-	React.useEffect(() => {
-		console.log(Clientsdata)
-	})
+	React.useEffect(() => {})
 
 	return (
 		<div>

@@ -26,7 +26,7 @@ function ServicesCard({ item }) {
 			<div className='card mb-3'>
 				<div className='row  no-gutters'>
 					<Col lg={6} md={12}>
-						<img ref={elem} src={item.img} className='card-img' alt='...' />
+						<img ref={elem} src={item.img} className='card-img image-card' alt='...' />
 					</Col>
 
 					<Col lg={6} md={12}>
