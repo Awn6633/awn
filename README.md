@@ -1,2 +1,6 @@
-cd frontend /n yarn /n yarn start
-# cd frontend /n yarn /n yarn start
+
+`cd frontend`
+
+` yarn `  or ` npm install `
+
+` yarn start` or ` npm run start`
