@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Container, Row, Col } from 'react-bootstrap'
 import teamSvg from '../../assets/story.svg'
+import { Link } from 'react-router-dom'
 import './home-about.styles.css'
 function HomeAbout() {
 	return (
@@ -14,7 +15,9 @@ function HomeAbout() {
 								sollicitudin porta. Donec vel eleifend quam. In maximus aliquet volutpat. Mauris
 								vitae ultrices risus, aliquam feugiat urna. Aenean scelerisque, nisi et porttitor
 								elementum, dui arcu malesuada
-								<Button className='d-block mt-3'>See More</Button>
+								<Button as={Link} to='/story' className='about-btn-link'>
+									See More
+								</Button>
 							</p>
 						</div>
 					</Col>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import HomeContact from '../../components/home-contact-us/home-contact.component'
 
@@ -22,6 +22,8 @@ import { useSelector } from 'react-redux'
 
 import './home.styles.css'
 
+import strlink from '../../assets/undraw_Process_re_gws7.svg'
+
 function HomePage() {
 	const Clientsdata = useSelector((state) => state.data.clients)
 
@@ -31,7 +33,7 @@ function HomePage() {
 	return (
 		<div>
 			<>
-				<Hero />
+				<Hero image={strlink} title='AWN' subTitle='عون' />
 				<SectionsTitles title='Our Story' />
 				<HomeAbout />
 				<SectionsTitles title='Service' />

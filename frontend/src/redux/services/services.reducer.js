@@ -17,6 +17,11 @@ import client6 from '../../assets/client6.svg'
 import client7 from '../../assets/client7.svg'
 import client8 from '../../assets/client8.svg'
 
+import im1 from '../../assets/1.jpg'
+import im2 from '../../assets/2.jpg'
+import im3 from '../../assets/3.jpeg'
+import im4 from '../../assets/3.jpeg'
+
 export const fetchData = createAsyncThunk(
 	'data/fetchData',
 	async (_, { rejectWithValue }) => {
@@ -119,6 +124,44 @@ const initialState = dataAdapter.getInitialState({
 			desc: 'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
 			pos: 'right',
 			img: image6,
+		},
+	],
+	team: [
+		{
+			id: 4,
+			name: 'Game Development',
+			work: 'Gamed Gdan',
+			desc:
+				'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
+			pos: 'right',
+			img: im1,
+		},
+		{
+			id: 4,
+			name: 'Game Development',
+			work: 'Gamed Fash5',
+			desc:
+				'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
+			pos: 'left',
+			img: im2,
+		},
+		{
+			id: 4,
+			name: 'Game Development',
+			work: 'Gamed Bs',
+			desc:
+				'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
+			pos: 'right',
+			img: im3,
+		},
+		{
+			id: 4,
+			name: 'Game Development',
+			work: 'Gamed',
+			desc:
+				'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia ',
+			pos: 'left',
+			img: im4,
 		},
 	],
 })

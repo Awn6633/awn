@@ -25,3 +25,8 @@
 .home-about-section {
 	overflow: hidden;
 }
+.about-btn-link {
+	display: block;
+	width: 100px;
+	margin-top: 1rem;
+}

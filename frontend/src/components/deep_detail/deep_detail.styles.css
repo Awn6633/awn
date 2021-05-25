@@ -1,0 +1,13 @@
+.deep-detail {
+	margin: 0 auto;
+}
+
+.deep-detail p {
+	margin: 0 auto;
+	font-size: 2rem;
+	font-family: var(--fontF);
+	color: gray;
+	text-align: center;
+	line-height: 50px;
+	word-spacing: 1px;
+}

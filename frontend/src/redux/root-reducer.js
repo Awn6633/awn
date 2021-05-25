@@ -1,8 +1,8 @@
-import { combineReducers } from '@reduxjs/toolkit';
-import dataReducer from './dataSlice/dataSlice';
+import { combineReducers } from '@reduxjs/toolkit'
+import dataReducer from './services/services.reducer'
 
 const rootReducer = combineReducers({
-  data: dataReducer,
-});
+	data: dataReducer,
+})
 
-export default rootReducer;
+export default rootReducer

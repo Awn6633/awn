@@ -224,7 +224,7 @@
 		top: 0;
 		right: 0;
 		width: 100%;
-		height: 11vh;
+		height: auto;
 		background: var(--color2);
 		clip-path: circle(29px at calc(100% - 2vw - 35px) calc(2vh + 35px));
 		z-index: 100;
