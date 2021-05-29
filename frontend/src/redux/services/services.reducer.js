@@ -22,6 +22,13 @@ import im2 from '../../assets/2.jpg'
 import im3 from '../../assets/3.jpeg'
 import im4 from '../../assets/3.jpeg'
 
+import lan1 from '../../assets/land1.jpg'
+import lan2 from '../../assets/land2.jpg'
+import lan3 from '../../assets/land3.jpg'
+import lan4 from '../../assets/land4.jpg'
+import lan5 from '../../assets/land5.jpg'
+import lan6 from '../../assets/land6.jpg'
+
 export const fetchData = createAsyncThunk(
 	'data/fetchData',
 	async (_, { rejectWithValue }) => {
@@ -48,7 +55,9 @@ export const fetchData = createAsyncThunk(
 	// }
 )
 
-const dataAdapter = createEntityAdapter()
+const dataAdapter = createEntityAdapter({
+	selectId: (item) => item.slug,
+})
 
 const initialState = dataAdapter.getInitialState({
 	status: 'idle',
@@ -70,62 +79,6 @@ const initialState = dataAdapter.getInitialState({
 
 		{ id: 8, img: client8 },
 	],
-	data: [
-		{
-			id: 1,
-			title: 'Graphic Design',
-			subtitle:
-				'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
-			desc: 'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
-			pos: 'left',
-			img: image1,
-		},
-		{
-			id: 2,
-			title: 'Web Development',
-			subtitle:
-				'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
-			desc: 'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
-			pos: 'right',
-			img: image2,
-		},
-		{
-			id: 3,
-			title: 'Business',
-			subtitle:
-				'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
-			desc: 'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
-			pos: 'left',
-			img: image3,
-		},
-		{
-			id: 4,
-			title: 'Game Development',
-			subtitle:
-				'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
-			desc: 'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
-			pos: 'right',
-			img: image4,
-		},
-		{
-			i: 5,
-			title: 'E-Marketing',
-			subtitle:
-				'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
-			desc: 'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
-			pos: 'left',
-			img: image5,
-		},
-		{
-			id: 6,
-			title: 'Media Production',
-			subtitle:
-				'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
-			desc: 'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
-			pos: 'right',
-			img: image6,
-		},
-	],
 	team: [
 		{
 			id: 4,
@@ -135,6 +88,22 @@ const initialState = dataAdapter.getInitialState({
 				'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
 			pos: 'right',
 			img: im1,
+			gallery: [
+				{ id: 1, img: lan1, caption: 'frist' },
+				{ id: 1, img: lan2, caption: 'second' },
+				{ id: 1, img: lan3, caption: 'third' },
+				{ id: 1, img: lan4, caption: 'four' },
+				{ id: 1, img: lan5, caption: 'five' },
+				{ id: 1, img: lan6, caption: 'sex' },
+			],
+			works: [
+				{ id: 1, img: lan1, caption: 'frist' },
+				{ id: 1, img: lan2, caption: 'second' },
+				{ id: 1, img: lan3, caption: 'third' },
+				{ id: 1, img: lan4, caption: 'four' },
+				{ id: 1, img: lan5, caption: 'five' },
+				{ id: 1, img: lan6, caption: 'sex' },
+			],
 		},
 		{
 			id: 4,
@@ -144,6 +113,22 @@ const initialState = dataAdapter.getInitialState({
 				'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
 			pos: 'left',
 			img: im2,
+			gallery: [
+				{ id: 1, img: lan1, caption: 'frist' },
+				{ id: 1, img: lan2, caption: 'second' },
+				{ id: 1, img: lan3, caption: 'third' },
+				{ id: 1, img: lan4, caption: 'four' },
+				{ id: 1, img: lan5, caption: 'five' },
+				{ id: 1, img: lan6, caption: 'sex' },
+			],
+			works: [
+				{ id: 1, img: lan1, caption: 'frist' },
+				{ id: 1, img: lan2, caption: 'second' },
+				{ id: 1, img: lan3, caption: 'third' },
+				{ id: 1, img: lan4, caption: 'four' },
+				{ id: 1, img: lan5, caption: 'five' },
+				{ id: 1, img: lan6, caption: 'sex' },
+			],
 		},
 		{
 			id: 4,
@@ -153,6 +138,22 @@ const initialState = dataAdapter.getInitialState({
 				'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia',
 			pos: 'right',
 			img: im3,
+			gallery: [
+				{ id: 1, img: lan1, caption: 'frist' },
+				{ id: 1, img: lan2, caption: 'second' },
+				{ id: 1, img: lan3, caption: 'third' },
+				{ id: 1, img: lan4, caption: 'four' },
+				{ id: 1, img: lan5, caption: 'five' },
+				{ id: 1, img: lan6, caption: 'sex' },
+			],
+			works: [
+				{ id: 1, img: lan1, caption: 'frist' },
+				{ id: 1, img: lan2, caption: 'second' },
+				{ id: 1, img: lan3, caption: 'third' },
+				{ id: 1, img: lan4, caption: 'four' },
+				{ id: 1, img: lan5, caption: 'five' },
+				{ id: 1, img: lan6, caption: 'sex' },
+			],
 		},
 		{
 			id: 4,
@@ -162,6 +163,22 @@ const initialState = dataAdapter.getInitialState({
 				'Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia Excepteur sint occaecat cupidatat Excepteur proident, sunt in culpa qui officia ',
 			pos: 'left',
 			img: im4,
+			gallery: [
+				{ id: 1, img: lan1, caption: 'frist' },
+				{ id: 1, img: lan2, caption: 'second' },
+				{ id: 1, img: lan3, caption: 'third' },
+				{ id: 1, img: lan4, caption: 'four' },
+				{ id: 1, img: lan5, caption: 'five' },
+				{ id: 1, img: lan6, caption: 'sex' },
+			],
+			works: [
+				{ id: 1, img: lan1, caption: 'frist' },
+				{ id: 1, img: lan2, caption: 'second' },
+				{ id: 1, img: lan3, caption: 'third' },
+				{ id: 1, img: lan4, caption: 'four' },
+				{ id: 1, img: lan5, caption: 'five' },
+				{ id: 1, img: lan6, caption: 'sex' },
+			],
 		},
 	],
 })

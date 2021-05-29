@@ -9,6 +9,7 @@ import Footer from './components/footer/footer.componet'
 import HomePage from './layouts/home/home.page'
 import OurStory from './layouts/our-story/our-story.page'
 import ContactUs from './layouts/contact-us/contact-us.page'
+import ServicesPage from './layouts/services-layout/services-layout.page'
 
 axios.defaults.withCredentials = true
 
@@ -17,9 +18,10 @@ function App() {
 		<div>
 			<Navbar />
 			<Switch>
-				<Route path='/' exact component={HomePage} />
+				<Route path='/home' exact component={HomePage} />
 				<Route path='/story' exact component={OurStory} />
 				<Route path='/contact' exact component={ContactUs} />
+				<Route path='/services/:slug' exact component={ServicesPage} />
 			</Switch>
 
 			<Footer />

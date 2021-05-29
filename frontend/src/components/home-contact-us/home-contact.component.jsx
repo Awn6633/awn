@@ -4,6 +4,7 @@ import contactSvg from '../../assets/undraw_contact_us_15o2.svg'
 
 import { FaFacebook, FaWhatsapp, FaLocationArrow } from 'react-icons/fa'
 
+import { Link } from 'react-router-dom'
 import { Container, Col, Row, Button } from 'react-bootstrap'
 function HomeContact() {
 	return (
@@ -20,7 +21,9 @@ function HomeContact() {
 									<FaLocationArrow style={{ color: `var(--color2)` }} />
 								</div>
 								<div className='contact-btn'>
-									<Button className='mt-5 mb-5'>Contact US</Button>
+									<Button to='/contact' as={Link} className='mt-5 mb-5'>
+										Contact US
+									</Button>
 								</div>
 							</div>
 						</div>

@@ -5,12 +5,14 @@ import des from '../../assets/undraw_Business_plan_re_0v81.svg'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Col } from 'react-bootstrap'
-
+import { Link } from 'react-router-dom'
 import { FaRegAngry, FaRegHeart } from 'react-icons/fa'
+
 function ServicesCard({ item }) {
 	const scroller = useRef(null)
 	const elem = useRef(null)
 	gsap.registerPlugin(ScrollTrigger)
+
 	useEffect(() => {
 		// gsap.to(elem.current, {
 		// 	y: -60,
@@ -44,6 +46,7 @@ function ServicesCard({ item }) {
 						</div>
 					</Col>
 				</div>
+				<Link to={`/services/${item.slug}`} class='stretched-link' />
 			</div>
 		</div>
 	)

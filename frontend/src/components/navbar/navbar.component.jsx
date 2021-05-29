@@ -45,7 +45,7 @@ function TopNav() {
 	useEffect(() => {
 		setActive(window.matchMedia('(min-width: 992px)').matches)
 		window.addEventListener('scroll', handelScroll)
-		console.log('run', active)
+
 		return () => {
 			window.removeEventListener('scroll', handelScroll)
 		}
@@ -54,22 +54,22 @@ function TopNav() {
 	return (
 		<div>
 			<div className='brand' ref={cloneBrand}>
-				<Link className='navbar-brand' to='/' exact>
+				<Link className='navbar-brand' to='/'>
 					<img alt='logo' src={Logo} width='50' height='50' />
 				</Link>
 			</div>
 
 			<nav ref={navHumb} className={` nav ${active ? 'active' : ''}`}>
-				<Link exact to='/' className={`nav__link ${active ? 'active' : ''}`}>
+				<Link to='/home' className={`nav__link ${active ? 'active' : ''}`}>
 					Home
 				</Link>
-				<Link exact to='/services' className={`nav__link ${active ? 'active' : ''}`}>
+				<a href='/home/#services' className={`nav__link ${active ? 'active' : ''}`}>
 					Services
-				</Link>
-				<Link exact to='/story' className={`nav__link ${active ? 'active' : ''}`}>
+				</a>
+				<Link to='/story' className={`nav__link ${active ? 'active' : ''}`}>
 					Our Story
 				</Link>
-				<Link exact to='/contact' className={`nav__link ${active ? 'active' : ''}`}>
+				<Link to='/contact' className={`nav__link ${active ? 'active' : ''}`}>
 					Contact Us
 				</Link>
 			</nav>

@@ -24,11 +24,15 @@ import './home.styles.css'
 
 import strlink from '../../assets/undraw_Process_re_gws7.svg'
 
+import { selectallWorker, selectOneService } from '../../redux/works/work.reducer'
+
 function HomePage() {
 	const Clientsdata = useSelector((state) => state.data.clients)
 
-	const Services = useSelector((state) => state.data.data)
-	React.useEffect(() => {})
+	const Services = useSelector((state) => state.services.data)
+	React.useEffect(() => {
+		console.log(Services)
+	})
 
 	return (
 		<div>
@@ -37,7 +41,7 @@ function HomePage() {
 				<SectionsTitles title='Our Story' />
 				<HomeAbout />
 				<SectionsTitles title='Service' />
-				<Container fluid>
+				<Container fluid id='services' name='services'>
 					<Row className='justify-content-center'>
 						{Services.map((item) => (
 							<Col key={item.id} xl={5} lg={6} md={6}>

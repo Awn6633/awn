@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 import './clients.styles.css'
 function Clients({ clinets }) {
 	useEffect(() => {
-		console.log(clinets)
 		return () => {}
 	}, [])
 	return (

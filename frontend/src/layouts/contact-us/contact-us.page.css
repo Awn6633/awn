@@ -20,7 +20,7 @@
 .form-social {
 	display: flex;
 	justify-self: start;
-	width: 100%;
+	width: 70%;
 	font-size: 1.2rem;
 }
 .form-social svg {
@@ -29,8 +29,8 @@
 	cursor: pointer;
 }
 .form-image img {
-	width: 100%;
-	height: 100%;
+	width: 70%;
+	object-fit: cover;
 }
 
 .contact-form {
@@ -45,7 +45,7 @@
 }
 
 .contact-us-page .sections-titles-wrapper {
-	margin: 1vh 0;
+	margin: 3vh 0;
 }
 
 .form-btn {

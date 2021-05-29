@@ -27,8 +27,9 @@ function ContactUs() {
 	return (
 		<div className='contact-us-page'>
 			<Container fluid>
+				<SectionsTitles title='Contact Us' />
 				<Row>
-					<Col lg={6}>
+					<Col lg={12}>
 						<div className='form-image'>
 							<img src={Image} />
 							<div className='form-social'>
@@ -39,8 +40,7 @@ function ContactUs() {
 							</div>
 						</div>
 					</Col>
-					<Col lg={6}>
-						<SectionsTitles title='Contact Us' />
+					<Col lg={12}>
 						<div className='contact-form'>
 							<form>
 								<FormInput
