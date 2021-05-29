@@ -157,7 +157,7 @@ const initialState = dataAdapter.getInitialState({
 			],
 		},
 		{
-			i: 5,
+			id: 5,
 			title: 'E-Marketing',
 			slug: 'marketing',
 			subtitle:

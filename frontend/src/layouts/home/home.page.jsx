@@ -30,9 +30,6 @@ function HomePage() {
 	const Clientsdata = useSelector((state) => state.data.clients)
 
 	const Services = useSelector((state) => state.services.data)
-	React.useEffect(() => {
-		console.log(Services)
-	})
 
 	return (
 		<div>

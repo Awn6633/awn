@@ -55,7 +55,7 @@
 	width: 40%;
 	height: 100%;
 	background: var(--color1);
-	clip-path: circle(29px at calc(100% - 2vw - 35px) calc(1vh + 35px));
+	clip-path: circle(29px at calc(100% - 2vw - 30px) calc(1vh + 30px));
 	/* transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1); */
 	z-index: 100;
 	transition: clip-path 0.2s, transform 0.2s, width 0.2s cubic-bezier(0.86, 0, 0.07, 1);
@@ -65,7 +65,7 @@
 }
 .nav__link {
 	display: block;
-	font-size: 3.5rem;
+	font-size: 3rem;
 	font-weight: 800;
 	/* text-transform: lowercase; */
 	letter-spacing: -1px;
@@ -105,8 +105,8 @@
 	color: #fff;
 }
 .hamburger {
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 	border-radius: 50%;
 	cursor: pointer;
 	position: fixed;
@@ -226,14 +226,14 @@
 		width: 100%;
 		height: auto;
 		background: var(--color1);
-		clip-path: circle(29px at calc(100% - 2vw - 35px) calc(1vh + 35px));
+		clip-path: circle(29px at calc(100% - 2vw - 30px) calc(1vh + 30px));
 		z-index: 100;
 		transition: clip-path 0.2s, transform 0.2s, width 0.2s cubic-bezier(0.86, 0, 0.07, 1);
 	}
 
 	.nav__link {
 		display: block;
-		font-size: 2rem;
+		font-size: 3rem;
 		font-weight: 800;
 		letter-spacing: 0px;
 		text-align: right;
@@ -250,6 +250,6 @@
 
 @media screen and (min-width: 1200px) {
 	.nav__link {
-		font-size: 3.5rem;
+		font-size: 3rem;
 	}
 }

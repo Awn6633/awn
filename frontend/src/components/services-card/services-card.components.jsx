@@ -46,7 +46,7 @@ function ServicesCard({ item }) {
 						</div>
 					</Col>
 				</div>
-				<Link to={`/services/${item.slug}`} class='stretched-link' />
+				<Link to={`/services/${item.slug}`} className='stretched-link' />
 			</div>
 		</div>
 	)

@@ -34,8 +34,8 @@ function HeroSection({ image, title, subTitle }) {
 					<div ref={titleAnimation} className='projectTitle'>
 						<div className='titleWrapper'>
 							<div className='part'>
-								{title.split('').map((letter) => (
-									<div className='letterWrapper'>
+								{title.split('').map((letter, idx) => (
+									<div key={idx} className='letterWrapper'>
 										<span>{letter}</span>
 									</div>
 								))}
@@ -67,8 +67,8 @@ function HeroSection({ image, title, subTitle }) {
 						</div>
 						<div className='titleWrapper cloneWrapper'>
 							<div className='part'>
-								{title.split('').map((letter) => (
-									<div className='letterWrapper'>
+								{title.split('').map((letter, idx) => (
+									<div key={idx} className='letterWrapper'>
 										<span>{letter}</span>
 									</div>
 								))}
