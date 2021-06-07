@@ -1,6 +1,10 @@
 import React from 'react'
 import countImage from '../../assets/svg.png'
 import './footer.styles.css'
+import Blob from '../../assets/footer-blob.svg'
+import Blob1 from '../../assets/footer-blob1.svg'
+import Blob2 from '../../assets/footer-blob2.svg'
+import Blob3 from '../../assets/footer-blob3.svg'
 function Footer() {
 	return (
 		// style={{ backgroundImage: `url(${countImage})` }}
@@ -97,6 +101,11 @@ function Footer() {
 					</div>
 				</div>
 			</div>
+			<img className='footer-blob' src={Blob2} alt='footer blob' />
+
+			<img className='footer-blob1' src={Blob1} alt='footer blob 1' />
+			<img className='footer-blob2' src={Blob2} alt='footer blob' />
+			{/* <img className='footer-blob3' src={Blob3} alt='footer blob' /> */}
 		</footer>
 	)
 }

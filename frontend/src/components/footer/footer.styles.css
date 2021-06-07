@@ -8,6 +8,7 @@
 	display: flex;
 	align-items: center;
 	border-top: 1px solid black;
+	position: relative;
 }
 
 .footer h5 {
@@ -21,4 +22,33 @@
 	font-size: 1.5rem;
 	color: #183241;
 	color: var(--color2);
+}
+.footer-blob2,
+.footer-blob3,
+.footer-blob,
+.footer-blob1 {
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	z-index: -1;
+}
+
+.footer-blob1 {
+	left: -80px;
+	bottom: 0;
+}
+
+.footer-blob {
+	bottom: -180px;
+	right: -70px;
+	transform: rotate(80deg);
+}
+
+.footer-blob3 {
+	right: 30px;
+	bottom: -80px;
+}
+.footer-blob2 {
+	bottom: -120px;
+	right: 160px;
 }
