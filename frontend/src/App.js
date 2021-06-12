@@ -12,6 +12,7 @@ import ContactUs from './layouts/contact-us/contact-us.page'
 import ServicesPage from './layouts/services-layout/services-layout.page'
 import Chat from './components/chat/chat.component'
 import Preview from './layouts/preview/preview'
+import CommingSoon from './layouts/coming-soon/coming-soon'
 
 axios.defaults.withCredentials = true
 
@@ -26,6 +27,7 @@ function App() {
 				<Route path='/story' exact component={OurStory} />
 				<Route path='/contact' exact component={ContactUs} />
 				<Route path='/services/:slug' exact component={ServicesPage} />
+				<Route path='/comming-soon' exact component={CommingSoon} />
 			</Switch>
 			<Chat />
 			<Footer />

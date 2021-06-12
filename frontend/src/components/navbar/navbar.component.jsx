@@ -60,6 +60,9 @@ function TopNav() {
 			</div>
 
 			<nav ref={navHumb} className={` nav ${active ? 'active' : ''}`}>
+				<Link to='/' className={`nav__link ${active ? 'active' : ''}`}>
+					Companies
+				</Link>
 				<Link to='/home' className={`nav__link ${active ? 'active' : ''}`}>
 					Home
 				</Link>

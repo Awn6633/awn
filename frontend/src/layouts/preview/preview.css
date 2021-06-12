@@ -8,46 +8,102 @@
 	bottom: 0;
 	z-index: 5000;
 	background-color: #fff;
+	overflow: auto;
 }
 
-.wrapper {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
+@media screen and (max-width: 992px) {
 }
+
 .flip {
 	width: 100%;
-	height: 100%;
+	height: auto;
+	min-height: 100vh;
 	background: rgb(174, 205, 238);
 	background: radial-gradient(circle, rgba(174, 205, 238, 1) 0%, rgba(148, 187, 233, 1) 100%);
 	clip-path: circle(30.1% at 0 0);
 	display: flex;
 	justify-content: center;
-	align-items: center;
-}
-
-.company {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	justify-content: center;
-	align-items: center;
 	position: relative;
+	align-items: center;
 }
 
-.company img {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	box-shadow: 5px 10px 24px 4px rgb(15 37 77 / 41%);
-	z-index: 1;
+.card-icon-root {
+	margin-top: 15px;
+	margin-bottom: 20vh;
+	height: 291px;
 	transform: scale(0);
-	opacity: 0;
+	/* opacity: 0; */
+}
+
+.card-icon-wrapper {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 24px;
+	background: #fff;
 	cursor: pointer;
+	border-radius: 8px;
+	border: 1px solid #dfe5eb;
+	top: 0;
+	position: relative;
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-icon-link {
+	color: initial;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.card-top-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 12px;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-top-icon {
+	width: 100%;
+	height: 200px;
+	border-radius: 6px;
+	box-sizing: border-box;
+	color: var(--main-color);
+	border: 1px solid #f0f4f7;
+}
+
+.card-icon-bottom {
+	height: 133px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card-icon-title {
+	height: 40px;
+	line-height: 24px;
+	font-size: 22px !important;
+	font-weight: 400;
+	white-space: pre-line;
+	color: var(--main-color);
+}
+.card-icon-desc {
+	margin-top: 0px;
+	max-width: 300px;
+	text-align: center;
+	color: #7a92a5;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.card-plan {
+	margin-top: 20px;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.card-icon-link:hover {
+	text-decoration: none;
 }
